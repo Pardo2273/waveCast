@@ -1,0 +1,19 @@
+.menu-lateral{
+    display: grid;
+    /*4 filas 3 de ellas se ajustan automaticamente a la altura del elemento que estan 
+    dentro de cada una de ellas y la ultima toma el resto del contenedor*/
+    /* grid-template-rows: auto auto auto 1fr;  para no repetir tanto auto.. hacemos lo siguiente*/
+    grid-template-rows: repeat(3, auto) 1fr;
+    row-gap: 2rem; /*espacio entre filas*/
+
+}
+
+.menu-lateral__logo{
+    justify-self: center; /*alinear los elementos de forma horizontal*/
+}
+
+/* tercera razon del porque la carpeta se llama grid-flex */
+.menu-lateral__link button{ 
+    display: flex;
+    align-items: center;
+}

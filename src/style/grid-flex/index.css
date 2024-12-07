@@ -1,0 +1,27 @@
+body{
+    display: grid;
+    /*ayuda a definir las areas para posicionar los elementos en pantalla */
+    grid-template-areas: 
+    "aside header"
+    "aside main"; 
+    grid-template-columns: auto 1fr; /*definiendo el ancho de las columnas*/
+    /*1fr solo se usa en grid y es una unidad de medida especifica*/
+    /* si en un contenedor tengo 1fr y no tengo mas columnas pues esta usa el 100% del contenedor */
+    /* si hubieran dos columnas y a cada una se le da 1fr pues cada una abarca el 50% del contenedor */
+    /* ya el auto es para que se ajuste esa columna al ancho de los elementos que contiene (menu) */
+}
+
+/* el grid area se usa en conjunto con grid-template-areas
+grid-template-areas define el orden o la forma en que se colocan los elementos en la cuadricula dandole un nombre a los elementos..
+y con grid-area enlazamos los elementos establecidos en el grid-templete-areas con el nombre */
+.cabecera{
+    grid-area: header;
+}
+
+.menu-lateral{
+    grid-area: aside;
+}
+
+.principal{
+    grid-area: main;
+}
